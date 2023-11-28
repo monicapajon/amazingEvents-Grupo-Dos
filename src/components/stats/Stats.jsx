@@ -19,7 +19,7 @@ const Stats = () => {
       setTablesData(dataToTables(data));
     } else {
       // Si no existen, realiza la llamada a la API para obtener los datos
-      getData("https://mindhub-xj03.onrender.com/api/amazing", (response) => {
+      getData("http://localhost:3000/eventos", (response) => {
         setEventos(response);
         setTablesData(dataToTables(response));
         // Almacena los datos en el almacenamiento local para su uso posterior

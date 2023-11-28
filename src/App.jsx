@@ -7,6 +7,7 @@ import filterDate from "./components/functions/FilterDate";
 import Details from "./components/utilities/details/Details";
 import Stats from "./components/stats/Stats";
 import Contac from "./components/contact/Contac";
+import Admin from "./components/admin/Admin";
 import Footer from "./components/utilities/Footer/Footer";
 
 function App() {
@@ -57,6 +58,9 @@ function App() {
           </Route>{" "}
           <Route path="stats" element={<Stats />} />
           <Route path="contact" element={<Contac />} />
+          <Route path="admin" element={<Admin />} />
+
+
         </Routes>
         <Footer />
       </Router>
