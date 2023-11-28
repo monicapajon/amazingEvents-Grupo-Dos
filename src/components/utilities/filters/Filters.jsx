@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
-import { boxes } from "../Links";
-import "./Filters.css";
-import PropTypes from "prop-types";
-import { getAllEvents, listOfEvents } from "../../../Redux/Reducers/events";
-import Cards from "../../utilities/cards/Cards";
-import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from 'react';
+import { boxes } from '../Links';
+import './Filters.css';
+import PropTypes from 'prop-types';
+import { getAllEvents, listOfEvents } from '../../../Redux/Reducers/events';
+import Cards from '../../utilities/cards/Cards';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Filters = ({ xporFecha, indic }) => {
   const dispatch = useDispatch();
   const eventos = useSelector(listOfEvents);
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState('');
   const [filteredData, setFilteredData] = useState([]); // Inicialmente, la copia es un array vacío
   const onChangeInput = (e) => {
     setInput(e.target.value);
@@ -52,16 +52,16 @@ const Filters = ({ xporFecha, indic }) => {
     if (eventos.length > 0) {
       applyFilters();
     } else {
-      console.log("no hay nada we");
+      console.log('no hay nada we');
     }
   }, [eventos, selectedCategories, selectedCategory, input]);
   return (
     <div className="contentMain">
-      <div className={"contentButton"}>
-        <div className={"contentButtonContainer"}>
-          <div className={"contentBoxs"}>
+      <div className={'contentButton'}>
+        <div className={'contentButtonContainer'}>
+          <div className={'contentBoxs'}>
             {boxes.map((b, index) => (
-              <div className={"checkBoxes"} key={index}>
+              <div className={'checkBoxes'} key={index}>
                 <input
                   type="checkbox"
                   value={b.name}
@@ -80,12 +80,11 @@ const Filters = ({ xporFecha, indic }) => {
               </div>
             ))}
           </div>
-          <div className={"selectResponsive"}>
+          <div className={'selectResponsive'}>
             <select
               onChange={(e) => {
                 setSelectedCategory(e.target.value);
-              }}
-            >
+              }}>
               <option value="">Choose a category</option>
               {boxes.map((b, index) => (
                 <option key={index} value={b.name}>
@@ -94,7 +93,7 @@ const Filters = ({ xporFecha, indic }) => {
               ))}
             </select>
           </div>
-          <div className={"searchBar"}>
+          <div className={'searchBar'}>
             <input
               placeholder="Buscar..."
               className="input-search-bar"
@@ -105,8 +104,8 @@ const Filters = ({ xporFecha, indic }) => {
           </div>
         </div>
       </div>
-      <div className={"cardsSpace"}>
-        <div className={"cardsContainer"}>
+      <div className={'cardsSpace'}>
+        <div className={'cardsContainer'}>
           {filteredData.length > 0 ? (
             filteredData.map((ev, index) => (
               <Cards

@@ -1,24 +1,23 @@
-import "./Header.css";
-import { links } from "../Links";
-import icon from "../../../assets/icono.png";
-
-import { useState, useEffect } from "react";
+import './Header.css';
+import { links } from '../Links';
+import icon from '../../../assets/icono.png';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
-  const [background, setBackground] = useState("");
-  const [showMenu, setShowMenu] = useState("");
+  const [background, setBackground] = useState('');
+  const [showMenu, setShowMenu] = useState('');
   const changeColorHeader = () => {
     if (document.documentElement.scrollTop > 0) {
-      setBackground("notInTop");
+      setBackground('notInTop');
     } else {
-      setBackground("");
+      setBackground('');
     }
   };
   const showAndHidden = () => {
-    setShowMenu(showMenu === "" ? "show" : "");
+    setShowMenu(showMenu === '' ? 'show' : '');
   };
   useEffect(() => {
-    window.addEventListener("scroll", changeColorHeader);
+    window.addEventListener('scroll', changeColorHeader);
   });
   console.log(showMenu);
   return (
@@ -26,7 +25,7 @@ const Header = () => {
       <div className={`headerContainer `}>
         <div className="logo">
           <img src={icon} width={50} height={50} />
-        </div>{" "}
+        </div>{' '}
         <div className="menu-icon">
           <svg
             role="responsive"
@@ -34,8 +33,7 @@ const Header = () => {
             version="1.1"
             width="40px"
             viewBox="0 0 256 256"
-            onClick={showAndHidden}
-          >
+            onClick={showAndHidden}>
             <metadata>
               Svg Vector Icons : http://www.onlinewebfonts.com/icon
             </metadata>
