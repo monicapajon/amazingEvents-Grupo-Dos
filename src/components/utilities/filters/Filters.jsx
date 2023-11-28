@@ -121,7 +121,7 @@ const Filters = ({ xporFecha, indic }) => {
               />
             ))
           ) : (
-            <h1>No hay nada we</h1>
+            <h1>No hay nada para mostrar</h1>
           )}
         </div>
       </div>

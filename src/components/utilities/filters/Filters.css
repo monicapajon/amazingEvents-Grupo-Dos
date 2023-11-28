@@ -3,17 +3,21 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  color: white;
+  color: black;
+  background-color: white;
+ 
 }
 .contentButtonContainer {
   display: flex;
   width: 90%;
   align-items: center;
+  background-color: white;
 }
 .contentBoxs {
   display: flex;
   width: 50%;
   justify-content: space-around;
+   
 }
 .searchBar {
   width: 50%;
@@ -31,6 +35,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  background-color: white;
 }
 
 .cardsContainer {
