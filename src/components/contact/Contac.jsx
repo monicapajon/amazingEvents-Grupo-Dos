@@ -40,9 +40,6 @@ const Contac = () => {
               placeholder="Tu Web"
               type={"url"}
             />
-            <span>
-              Si su pais no se encuentra en la lista, oprima Ingresar pais
-            </span>
             <textarea
               name="text"
               placeholder="Cuéntanos como te podemos ayudar"
