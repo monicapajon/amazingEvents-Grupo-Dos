@@ -164,7 +164,7 @@ const Post = () => {
                                             type="submit"
                                             value="submit"
                                         >
-                                            Enviar
+                                            Add Event
                                         </button>
                                     </div>
                                 </form>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Post from './Post'
 import Delete from './Delete'
+import GetAll from './GetAll';
 import './admin.css';
 
 const Admin = () => {
@@ -60,6 +61,7 @@ const Admin = () => {
     <div className='crud'>
           <Post/>
           <Delete/>
+          <GetAll/>
 
     </div>
     </div>

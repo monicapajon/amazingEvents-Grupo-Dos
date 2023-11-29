@@ -3,46 +3,63 @@ import './admin.css';
 
 const Delete = () => {
     const [eventNameToDelete, setEventNameToDelete] = useState('');
-    const [isDivVisible, setIsDivVisible] = useState(false);
+    const [successMessage, setSuccessMessage] = useState('');
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const [isFormVisible, setIsFormVisible] = useState(false);
 
-    const handleDeleteEvent = async () => {
+    const handleChange = (e) => {
+        setEventNameToDelete(e.target.value);
+    };
+
+    const handleDeleteEvent = async (e) => {
+        e.preventDefault();
+
         try {
             const response = await fetch(`http://localhost:3000/eventos/${eventNameToDelete}`, {
                 method: 'DELETE',
             });
 
-            const data = await response.json();
-
             if (response.ok) {
-                console.log(data.message);
+                setSuccessMessage('Evento eliminado exitosamente');
+                setFormSubmitted(true);
+                setIsFormVisible(false);
             } else {
-                console.error(data.message);
+                console.error('Error al eliminar el evento');
             }
         } catch (error) {
             console.error('Error:', error);
         }
     };
 
-    const toggleDivVisibility = () => {
-        setIsDivVisible(!isDivVisible);
-    };
-
     return (
-        <div>
-            <button className='dropButton' onClick={toggleDivVisibility}>Delete Event</button>
+        <div className="form">
+            {formSubmitted ? (
+                <p>{successMessage}</p>
+            ) : (
+                <div>
+                    <button className="dropButton" onClick={() => setIsFormVisible(!isFormVisible)}>
+                        Delete Events
+                    </button>
+                    {isFormVisible && (
+                        <form className="form" onSubmit={handleDeleteEvent}>
+                            <label htmlFor="name">Event Name</label>
+                            <input
+                                name="name"
+                                className="input"
+                                type="text"
+                                value={eventNameToDelete}
+                                onChange={handleChange}
+                                required
+                            />
 
-            {isDivVisible && (
-                <form className="form">
-                    <label htmlFor="name">Event Name</label>
-                    <input
-                        name="name"
-                        className="input"
-                        type="text"
-                        value={eventNameToDelete}
-                        onChange={(e) => setEventNameToDelete(e.target.value)}
-                    />
-                    <button className="button-form-contact" onClick={handleDeleteEvent}>Delete Event</button>
-                </form>
+                            <div className="div-button">
+                                <button className="button-form-contact" type="submit" value="submit">
+                                    Delete Event
+                                </button>
+                            </div>
+                        </form>
+                    )}
+                </div>
             )}
         </div>
     );
