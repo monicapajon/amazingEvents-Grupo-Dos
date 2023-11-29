@@ -17,7 +17,7 @@ const Details = () => {
       dispatch(getAllEvents());
       localStorage.setItem("eventsData", JSON.stringify(eventos));
     } else {
-      setThisEvent(eventos.filter((ev) => ev._id === parseInt(params.id))[0]);
+      setThisEvent(eventos.filter((ev) => ev._id === (params.id))[0]);
     }
   }, []);
 

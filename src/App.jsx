@@ -7,6 +7,7 @@ import filterDate from "./components/functions/FilterDate";
 import Details from "./components/utilities/details/Details";
 import Stats from "./components/stats/Stats";
 import Contac from "./components/contact/Contac";
+import Admin from "./components/admin/Admin";
 import Footer from "./components/utilities/Footer/Footer";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
@@ -64,6 +65,9 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="/my-cart" element={<Layout Comp1={<Cart />} />} />
           <Route path="*" element={<h1>Not Found</h1>} />
+          <Route path="admin" element={<Admin />} />
+
+
         </Routes>
         <Footer />
       </Router>
