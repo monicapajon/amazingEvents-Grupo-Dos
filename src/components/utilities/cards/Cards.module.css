@@ -61,7 +61,27 @@
 .card > div:not(:last-child) {
   margin-bottom: 10px;
 }
+.cardsButtons {
+  display: flex;
 
+  align-items: center;
+  justify-content: center;
+}
+.buttonCart button {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(81, 225, 124);
+  padding: 10px;
+  border: 1px solid rgb(81, 225, 124);
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-left: 10px;
+}
+.buttonCart button:hover {
+  background-color: white;
+  color: rgb(81, 225, 124);
+}
 @media (max-width: 1080px) {
   .card {
     width: 45%;

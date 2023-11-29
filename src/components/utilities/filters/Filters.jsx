@@ -7,7 +7,6 @@ import Cards from "../../utilities/cards/Cards";
 import { useDispatch, useSelector } from "react-redux";
 import Carousel from "../../carousel/Carousel";
 
-
 const Filters = ({ xporFecha, indic }) => {
   const dispatch = useDispatch();
   const eventos = useSelector(listOfEvents);
@@ -59,7 +58,7 @@ const Filters = ({ xporFecha, indic }) => {
   }, [eventos, selectedCategories, selectedCategory, input]);
   return (
     <div className="contentMain">
-      <Carousel/>
+      <Carousel />
       <div className={"contentButton"}>
         <div className={"contentButtonContainer"}>
           <div className={"contentBoxs"}>
@@ -118,6 +117,7 @@ const Filters = ({ xporFecha, indic }) => {
                 image={ev.image}
                 key={index}
                 id={ev._id}
+                price={ev.price}
               />
             ))
           ) : (
