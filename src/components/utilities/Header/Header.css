@@ -43,7 +43,7 @@ header {
   margin: 0px 20px;
   background-color: #7828e8;
   border: 1px solid #7828e8;
-  border-radius: 5px;
+  border-radius:25px;
   transition: 0.3s ease-in-out;
   padding: 15px;
 }
