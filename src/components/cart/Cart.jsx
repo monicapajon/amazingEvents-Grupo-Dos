@@ -70,20 +70,20 @@ const Cart = () => {
                     </div>
                   </div>
                 ))
-              : "nada"}
+              : "No se ha añadido nada al carrito"}
           </div>
           <div className="cart-product-total">
             <div className="total-word">
-              <h3>Total</h3>
+              <h3>Total:</h3>
             </div>
             <div className="price-total">${total}</div>
           </div>
           <div className="buttons-cart">
             <div className="button-deleteAll">
-              <button>Discharge All</button>
+              <button className="button-deleteAllA">Discharge All</button>
             </div>
             <div className="button-buy">
-              <button> Buy</button>
+              <button className="button-buyA"> Buy</button>
             </div>
           </div>
         </div>
