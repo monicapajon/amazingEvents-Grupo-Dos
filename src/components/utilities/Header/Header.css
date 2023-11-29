@@ -27,6 +27,7 @@ header {
   display: flex;
   width: 100%;
   justify-content: right;
+  align-items: center;
 }
 .headerLinks nav ul li {
   list-style: none;
@@ -50,7 +51,7 @@ header {
   background-color: white;
   color: #7828e8;
 }
-.headerLinks nav ul li:not(:last-child)::after {
+.headerLinks nav ul li:not(:last-child):not(:first-child)::after {
   content: "";
   display: block;
   width: 0%;
@@ -70,6 +71,33 @@ header {
   cursor: pointer;
   position: relative;
   z-index: 3;
+}
+.cartIcon {
+  padding: 10px;
+  border-radius: 50%;
+
+  position: relative;
+}
+.cartIcon a svg {
+  cursor: pointer;
+}
+.cartIcon a svg g path {
+  transition: 0.3s ease-in-out;
+}
+.cartIcon a svg:hover g path {
+  fill: #7828e8;
+  cursor: pointer;
+}
+
+.len-cart {
+  background-color: red;
+  padding: 3px 8px;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 @media (max-width: 1062px) {
   .headerContainer {
