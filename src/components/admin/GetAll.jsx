@@ -38,7 +38,7 @@ const GetAll = () => {
                         <p>Loading events...</p>
                     ) : events.length > 0 ? (
                         <div>
-                            <table>
+                            <table className='tableAdmin'>
                                 <thead>
                                     <tr className='borde'>
                                         <th>Name</th>

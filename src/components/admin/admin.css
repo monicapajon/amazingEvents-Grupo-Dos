@@ -137,16 +137,14 @@
     color: rgb(44, 146, 193);
     transition: 0.2s;
   }
-  table {
+.tableAdmin {
     background-color: white;
     width: 100%;
-    /* border: 1px solid #000; */
  }
- th, td {
-    /* width: 25%; */
+ .tableAdmin th, td {
     text-align: left;
     vertical-align: top;
-    border: 1px solid #000;
+    border: 1px solid hsl(0, 0%, 0%);
  }
   @media (max-width: 450px) {
     .admin-content {
