@@ -4,6 +4,7 @@ export const links = [
   { name: "Past events", href: "/past" },
   { name: "Stats", href: "/stats" },
   { name: "Contact Us", href: "/contact" },
+  { name: "Login", href: "/login" },
 ];
 
 export const boxes = [
