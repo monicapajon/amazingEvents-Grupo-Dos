@@ -46,10 +46,10 @@ const Details = () => {
               </div>
               <div className="detail-info">
                 <div className="detail-place">
-                  Lugar: <b>{thisEvent.place}</b>
+                Place: <b>{thisEvent.place}</b>
                 </div>
                 <div className="detail-price">
-                  Precio: <b>${thisEvent.price}</b>
+                Price: <b>${thisEvent.price}</b>
                 </div>
               </div>
             </div>
