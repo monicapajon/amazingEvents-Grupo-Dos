@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 import { getAllEvents, listOfEvents } from "../../../Redux/Reducers/events";
 import Cards from "../../utilities/cards/Cards";
 import { useDispatch, useSelector } from "react-redux";
+import Carousel from "../../carousel/Carousel";
+
 
 const Filters = ({ xporFecha, indic }) => {
   const dispatch = useDispatch();
@@ -57,6 +59,7 @@ const Filters = ({ xporFecha, indic }) => {
   }, [eventos, selectedCategories, selectedCategory, input]);
   return (
     <div className="contentMain">
+      <Carousel/>
       <div className={"contentButton"}>
         <div className={"contentButtonContainer"}>
           <div className={"contentBoxs"}>
@@ -118,7 +121,7 @@ const Filters = ({ xporFecha, indic }) => {
               />
             ))
           ) : (
-            <h1>No hay nada we</h1>
+            <h1>No hay nada para mostrar</h1>
           )}
         </div>
       </div>

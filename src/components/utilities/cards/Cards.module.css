@@ -5,9 +5,8 @@
   margin: 20px 0px;
   text-align: center;
   background-color: rgb(15, 15, 15);
-  box-shadow: -16px 16px 0px -8px aqua;
-  -webkit-box-shadow: -16px 16px 0px -8px aqua;
-  -moz-box-shadow: -16px 16px 0px -8px aqua;
+  border-radius: 10px; /* Ajusta este valor según la cantidad de redondeo deseada */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ajusta estos valores según la sombra deseada */
   position: relative;
   color: white;
   transition: 0.3s ease-in-out;
@@ -43,7 +42,7 @@
 .linkToDetail a {
   text-decoration: none;
   color: white;
-  background-color: rgb(11, 94, 215);
+  background-color: #7828e8;
   padding: 10px;
   margin: 100px 0px;
   border-radius: 0.5em;
@@ -51,12 +50,13 @@
   transition: 0.3s ease-in-out;
 }
 .linkToDetail a:hover {
-  border: 1px solid rgb(11, 94, 215);
-  color: rgb(11, 94, 215);
+  border: 1px solid #7828e8;
+  color: #7828e8;
   background-color: white;
 }
 .card:hover {
   transform: scale(1.1) !important;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 2);
 }
 .card > div:not(:last-child) {
   margin-bottom: 10px;

@@ -8,6 +8,8 @@ import Details from "./components/utilities/details/Details";
 import Stats from "./components/stats/Stats";
 import Contac from "./components/contact/Contac";
 import Footer from "./components/utilities/Footer/Footer";
+import Login from "./components/login/Login";
+import Register from "./components/register/Register";
 
 function App() {
   return (
@@ -57,6 +59,9 @@ function App() {
           </Route>{" "}
           <Route path="stats" element={<Stats />} />
           <Route path="contact" element={<Contac />} />
+          <Route path="login" element={<Login /> } />
+          <Route path="register" element={<Register /> } />
+          <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
         <Footer />
       </Router>
