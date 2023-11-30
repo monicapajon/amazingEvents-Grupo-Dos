@@ -7,9 +7,11 @@ import filterDate from "./components/functions/FilterDate";
 import Details from "./components/utilities/details/Details";
 import Stats from "./components/stats/Stats";
 import Contac from "./components/contact/Contac";
+import Admin from "./components/admin/Admin";
 import Footer from "./components/utilities/Footer/Footer";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
+import Cart from "./components/cart/Cart";
 
 function App() {
   return (
@@ -59,9 +61,13 @@ function App() {
           </Route>{" "}
           <Route path="stats" element={<Stats />} />
           <Route path="contact" element={<Contac />} />
-          <Route path="login" element={<Login /> } />
-          <Route path="register" element={<Register /> } />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="/my-cart" element={<Layout Comp1={<Cart />} />} />
           <Route path="*" element={<h1>Not Found</h1>} />
+          <Route path="admin" element={<Admin />} />
+
+
         </Routes>
         <Footer />
       </Router>

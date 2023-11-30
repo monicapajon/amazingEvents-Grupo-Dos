@@ -17,7 +17,7 @@ const Details = () => {
       dispatch(getAllEvents());
       localStorage.setItem("eventsData", JSON.stringify(eventos));
     } else {
-      setThisEvent(eventos.filter((ev) => ev._id === parseInt(params.id))[0]);
+      setThisEvent(eventos.filter((ev) => ev._id === (params.id))[0]);
     }
   }, []);
 
@@ -46,10 +46,10 @@ const Details = () => {
               </div>
               <div className="detail-info">
                 <div className="detail-place">
-                  Lugar: <b>{thisEvent.place}</b>
+                Place: <b>{thisEvent.place}</b>
                 </div>
                 <div className="detail-price">
-                  Precio: <b>${thisEvent.price}</b>
+                Price: <b>${thisEvent.price}</b>
                 </div>
               </div>
             </div>

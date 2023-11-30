@@ -1,0 +1,154 @@
+.admin-container {
+    margin-top: 140px;
+    width: 100%;
+    display: flex;
+    padding-bottom: 2vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .borde{
+    border: 4px dashed pink;
+  }
+  .delete{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .dropButton{
+    padding: 1vw 2vw;
+    background-color: #7828e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .dropButton:hover {
+    background-color: white;
+    color:#7828e8;
+    border: 1px solid #7828e8;
+  }
+  
+  .dropButton:active {
+    background-color: #7828e8;
+    color: white;
+  }
+  
+  
+  .admin-content {
+    background: white;
+    padding: 1vw;
+    width: 50%;
+    text-align: center;
+    padding: 2vw;
+    border-radius: 0.4em;
+  }
+  .crud{
+    display: flex;
+    flex-direction: column;
+    padding: 2vw ;
+    gap: 2vw;
+    justify-content: space-around;
+    
+  }
+  form {
+    font-size: 1.5vw;
+    padding-top: 1vw;
+  }
+  label{
+    width: 97%;
+    text-align: left;
+  }
+  .input {
+    width: 95%;
+    /* padding: 20px 10px; */
+    /* margin: 10px 0px; */
+    border: none;
+    font-size: 1vw;
+    border-radius: 0.4em;
+    background-color: #FFF2F2;
+  }
+  .contactanos-div-input button {
+    padding: 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    background-color: rgb(200, 35, 51);
+    color: white;
+  }
+  .contactanos-div-select {
+    width: 100%;
+  }
+  .contactanos-div-select button {
+    padding: 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    background-color: rgb(40, 167, 69);
+    color: white;
+  }
+  .contactanos-div-select button:hover {
+    background-color: white;
+    border: 1px solid rgb(40, 167, 69);
+    color: rgb(40, 167, 69);
+    transition: 0.2s ease-in-out;
+  }
+  .contactanos-div-input button:hover {
+    background-color: white;
+    border: 1px solid rgb(200, 35, 51);
+    color: rgb(200, 35, 51);
+    transition: 0.2s ease-in-out;
+  }
+  select {
+    padding: 20px 10px;
+    width: 84%;
+    border-radius: 0.4em;
+    font-size: 15px;
+    margin: 10px 0px;
+    background-color: rgb(243, 243, 243);
+    border: none;
+  }
+  textarea {
+    width: 95%;
+    border-radius: 0.4em;
+    height: 100px;
+    padding: 10px 10px;
+    border: none;
+    margin: 10px 0px;
+    background-color:  #FFF2F2;
+
+    resize: none;
+  }
+  textarea:focus {
+    outline: none;
+  }
+  .input:focus {
+    outline: none;
+  }
+  .div-button {
+    width: 80%;
+  }
+  
+  
+  .button-form-contact:hover {
+    background-color: white;
+    border: 1px solid rgb(44, 146, 193);
+    color: rgb(44, 146, 193);
+    transition: 0.2s;
+  }
+.tableAdmin {
+    background-color: white;
+    width: 100%;
+ }
+ .tableAdmin th, td {
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid hsl(0, 0%, 0%);
+ }
+  @media (max-width: 450px) {
+    .admin-content {
+      width: 90%;
+    }
+  }
+  
