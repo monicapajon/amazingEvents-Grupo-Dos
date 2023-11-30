@@ -5,9 +5,9 @@ const Contac = () => {
     <div className="contact-container">
       <div className="contact-content">
         <div className="title-contact-form">
-          <h1>¿Te ayudamos?</h1>
+          <h1>We help you?</h1>
           <br />
-          <p>Queremos saber que podemos hacer por ti y ayudarte a crecer</p>
+          <p>We want to know what we can do for you and help you grow.</p>
           <br />
         </div>
         <div className="form">
@@ -19,19 +19,19 @@ const Contac = () => {
             <input
               name="nombre"
               className="input"
-              placeholder="Tu nombre"
+              placeholder="Your name"
               type={"text"}
             />
             <input
               className="input"
               name="email"
-              placeholder="Tu email"
+              placeholder="Your email"
               type={"email"}
             />
             <input
               className="input"
               name="numero"
-              placeholder="Tu numero"
+              placeholder="Your number"
               type={"number"}
             />
             <input
@@ -42,7 +42,7 @@ const Contac = () => {
             />
             <textarea
               name="text"
-              placeholder="Cuéntanos como te podemos ayudar"
+              placeholder="Tell us how we can help you"
             />
             <div className="div-button">
               <button
@@ -50,7 +50,7 @@ const Contac = () => {
                 type="submit"
                 value={"submit"}
               >
-                Enviar
+                Send
               </button>
             </div>
           </form>
