@@ -23,7 +23,7 @@ const register = () => {
     const navigate = useNavigate()
     const handleRegister = () => {
 
-        axios.post("http://localhost:3000/api/register/", {
+        axios.post("http://localhost:3000/user/register/", {
             email: emailInputRef.current.value,
             password: passwordInputRef.current.value,
             name: nameImputRef.current.value,
@@ -32,7 +32,7 @@ const register = () => {
             age: ageInputRef.current.value
         })
             .then((response) => {
-                localStorage.setItem("token", response.data.token);
+                // localStorage.setItem("token", response.data.token);
                 alert("Register completed successfully")
                 navigate("/login")
             })
@@ -53,24 +53,24 @@ const register = () => {
                     }
                     }>
                         <input
-                            name="nombre"
+                            name="name"
                             className="input"
                             placeholder="name"
                             type={"text"}
                             ref={nameImputRef}
                         />
                         <input
-                            name="apellido"
+                            name="lastName"
                             className="input"
                             placeholder="lastName"
                             type={"text"}
                             ref={lastNameInputRef}
                         />
                         <input
-                            name="User"
+                            name="user"
                             className="input"
                             placeholder="User"
-                            type={"number"}
+                            type={"text"}
                             ref={userInputRef}
                         />
                         <input

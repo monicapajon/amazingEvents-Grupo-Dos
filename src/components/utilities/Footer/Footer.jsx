@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
         <div className="title-footer"></div>
         <div className="login-footer">
-          <LoginButton />
+          {/* <LoginButton /> */}
         </div>
       </div>
     </footer>

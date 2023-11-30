@@ -8,20 +8,20 @@ const Login = () => {
     const emailInputRef = useRef()
     const passwordInputRef = useRef()
     const navigate = useNavigate()
-    
     const handleSignIn = () => {
-
-        axios.post("http://localhost:3000/api/login/", {
+        axios.post("http://localhost:3000/user/login", {
             email: emailInputRef.current.value,
             password: passwordInputRef.current.value,
         })
             .then((response) => {
                 localStorage.setItem("token", response.data.token);
+                console.log(response.data)
+                navigate("/")
+                
             })
             .catch((error) => {
                 console.log(error);
             })
-            
     }
     useEffect(() => {
         if (localStorage.getItem("token")) {

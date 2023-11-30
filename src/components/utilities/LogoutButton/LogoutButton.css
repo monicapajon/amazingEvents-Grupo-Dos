@@ -1,0 +1,19 @@
+.logout-button {
+  margin: 0px 20px;
+  background-color: #7828e8;
+  border: 1px solid #7828e8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  transition: 0.3s ease-in-out;
+  padding: 15px 35px;
+}
+.logout-button:hover {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  color: #7828e8;
+  background-color: white;
+}

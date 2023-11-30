@@ -17,7 +17,7 @@ const Contac = () => {
             encType="text/plain"
           >
             <input
-              name="nombre"
+              name="name"
               className="input"
               placeholder="Your name"
               type={"text"}

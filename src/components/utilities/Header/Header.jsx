@@ -72,7 +72,9 @@ const Header = () => {
               {links.map((l, index) => (
                 <li key={index}>
                   <a href={l.href}>{l.name}</a>
+                
                 </li>
+
               ))}
             </ul>
           </nav>
