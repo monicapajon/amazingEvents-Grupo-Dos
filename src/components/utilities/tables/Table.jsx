@@ -18,7 +18,7 @@ const Table = ({ title, theads, data }) => {
             <tr data-testid="row" key={index}>
               <td>{d.categoria}</td>
               <td>${d.ganancias}</td>
-              <td>${d.asistencia.toFixed(2)}</td>
+              <td>{d.asistencia.toFixed(2)}%</td>
             </tr>
           ))}
         </tbody>

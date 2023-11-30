@@ -1,12 +1,13 @@
 import "./Header.css";
 import { links } from "../Links";
 import icon from "../../../assets/icono.png";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { myCart } from "../../../Redux/Reducers/Cart";
 import { useSelector } from "react-redux";
 
 const Header = () => {
+  const navigate = useNavigate();
   const thisCart = useSelector(myCart);
   const [background, setBackground] = useState("");
   const [showMenu, setShowMenu] = useState("");
@@ -20,6 +21,11 @@ const Header = () => {
   const showAndHidden = () => {
     setShowMenu(showMenu === '' ? 'show' : '');
   };
+  const logOut = () => {
+    localStorage.removeItem("token")
+    navigate('/')
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', changeColorHeader);
   });
@@ -72,10 +78,13 @@ const Header = () => {
               {links.map((l, index) => (
                 <li key={index}>
                   <a href={l.href}>{l.name}</a>
-                
                 </li>
-
               ))}
+
+              {localStorage.getItem("token")
+                ? <button onClick={logOut} className="botonLogut">Logout</button>
+                : <li><Link to={"/login"}>Login</Link></li>
+              }
             </ul>
           </nav>
         </div>

@@ -56,13 +56,11 @@ const Login = () => {
                             type={"password"}
                             ref={passwordInputRef}
                         />
-
                         <div className="div-button">
                             <button
                                 className="button-form-login"
                                 type="submit"
                                 value={"submit"}
-                                
                             >
                                 Login
                             </button>

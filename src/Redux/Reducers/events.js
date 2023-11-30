@@ -1,12 +1,14 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import axios from "axios"
+// dispatch  getAll events
+// reduc
 export const getAllEvents = createAsyncThunk("events/listEvents", async () => {
   const response = await axios
-    .get("https://mindhub-xj03.onrender.com/api/amazing")
+    .get("http://localhost:3000/eventos")
     .catch((error) => {
       return error.data;
     });
-  return response.data.events;
+  return response.data;
 });
 const initialState = {
   listEvents: [],
@@ -19,9 +21,11 @@ const eventSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getAllEvents.pending, () => {
+        // dispatch
         console.log("Trayendo los eventos wey");
       })
       .addCase(getAllEvents.fulfilled, (state, action) => {
+        // use selector
         state.listEvents = action.payload;
       });
   },

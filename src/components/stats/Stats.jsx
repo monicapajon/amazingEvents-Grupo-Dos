@@ -2,30 +2,22 @@ import { useEffect, useState } from "react";
 import dataToTables from "../functions/stats";
 import getData from "../functions/Api";
 import Table from "../utilities/tables/Table";
+import { useDispatch } from "react-redux";
 
 const Stats = () => {
   // Estado para almacenar los eventos y los datos de las tablas
   const [eventos, setEventos] = useState(null);
   const [tablesData, setTablesData] = useState(null);
   const table1 = ["Categorias", "Revenue", "Percentage of attendance"];
-
+  console.log(tablesData)
   useEffect(() => {
     // Verifica si los eventos se encuentran en el almacenamiento local
-    const data = JSON.parse(localStorage.getItem("eventsData"));
-
-    if (data) {
-      // Si existen en el almacenamiento local, establece los datos directamente
-      setEventos(data);
-      setTablesData(dataToTables(data));
-    } else {
-      // Si no existen, realiza la llamada a la API para obtener los datos
-      getData("http://localhost:3000/eventos", (response) => {
-        setEventos(response);
+      getData("http://localhost:3000/eventos/", (response) => {
+      setEventos(response);
         setTablesData(dataToTables(response));
         // Almacena los datos en el almacenamiento local para su uso posterior
-        localStorage.setItem("eventsData", JSON.stringify(response));
+        console.log(tablesData)
       });
-    }
   }, []);
 
   return (
@@ -43,18 +35,19 @@ const Stats = () => {
                 </tr>
               </thead>
               <tbody>
+                
                 {tablesData === null ? (
                   <h1>No hay datos</h1>
                 ) : (
                   <tr>
-                    <td>{tablesData.arrayPerc[0].nombre}</td>
+                    <td>{tablesData.arrayPerc[0]?.nombre }</td>
                     <td>
                       {
                         tablesData.arrayPerc[tablesData.arrayPerc.length - 1]
-                          .nombre
+                          ?.nombre
                       }
                     </td>
-                    <td>{tablesData.arrayCap[0].name}</td>
+                    <td>{tablesData.arrayCap[0]?.nombre}</td>
                   </tr>
                 )}
               </tbody>
